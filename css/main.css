@@ -135,6 +135,7 @@ a {
     margin: 80px 0 10px 0; 
     padding: 15px;
     background: rgba(255, 255, 255, 0.5);
+
 }
 
 .teamCon p {
@@ -144,25 +145,176 @@ a {
 .teamTitles {
     font-size: 48px;
     margin: 0 auto;
+    padding-bottom: 20px;
     color: #da291c;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-.gavin {
-    display: contents
-    margin-right: 20px;
-    margin-top: 20px;
-    padding-left: 10px;
-    max-width: 250px;
-    float: right;
+.designDiv {
+    grid-column:3/10;
+    border-bottom: 10px #000;
 }
 
-.katie {
-    display: contents
-    margin-right: 20px;
-    margin-top: 20px;
-    padding-right: 10px;
-    max-width: 250px;
-    float: left;
+.devDiv {
+    grid-row: 4;
+    margin: 0 auto;
+    border-bottom: 10px #000;
 }
+
 /* +++ End Team +++ */
+
+/* +++ Start Image Hover Effect +++*/
+/*.effectCon {
+	position:relative;
+    width:1200px;
+    margin: 0 auto;
+}*/
+
+.effect {
+    width: 250px;
+    height: 250px;
+    margin: 10px 10px 20px 0;
+    float: left;
+    border: 5px solid whitesmoke;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 2px 2px #e6e6e6;;
+    cursor: default;
+}
+ .effect .frost,.effect .content {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+ }
+ .effect img {
+    display: block;
+    position: relative;
+ }
+ .effect h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 24px;
+    padding: 10px;
+    margin: 10px 0 0 0;
+ }
+ 
+ .effect p {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    padding: 20px 20px 25px;
+    text-align: center;
+ }
+ .effect a.button {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 10px 0 0 0;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    box-shadow: 0 0 1px #000;
+ }
+ .effect a.button: hover {
+    box-shadow: 5px 5px 5px #000;
+ }
+
+ .effect-view img {
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+ }
+ .effect-view .frost {
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+    background-color: rgba(218,41,28, 0.7);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+ }
+ .effect-view h2 {
+    -webkit-transform: translateY(-100px);
+    -moz-transform: translateY(-100px);
+    -o-transform: translateY(-100px);
+    -ms-transform: translateY(-100px);
+    transform: translateY(-100px);
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+ }
+ .effect-view p {
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+    -o-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    transform: translateY(100px);
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+ }
+ .effect-view:hover img {
+    -webkit-transform: scale(1.2,1.2);
+    -moz-transform: scale(1.2,1.2);
+    -o-transform: scale(1.2,1.2);
+    -ms-transform: scale(1.2,1.2);
+    transform: scale(1.2,1.2);
+ }
+ .effect-view a.button {
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+ }
+ .effect-view:hover .frost {
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+ }
+ .effect-view:hover h2,
+ .effect-view:hover p,
+ .effect-view:hover a.button {
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+ }
+ .effect-view:hover p {
+    -webkit-transition-delay: 0.1s;
+    -moz-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    -ms-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+ }
+ .effect-view:hover a.button {
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    -ms-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+ }
+ /* +++ Start Image Hover Effect +++*/
