@@ -11,7 +11,7 @@ html {
 a:link,
 a:visited,
 a:active {
-    text-decoration: none;
+    text-decoration: none; 
 }
 
 body {
@@ -134,7 +134,7 @@ a {
     grid-row: 3;
     margin: 80px 0 10px 0; 
     padding: 15px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.7);
 
 }
 
@@ -151,12 +151,16 @@ a {
 }
 
 .designDiv {
-    grid-column:3/10;
-    border-bottom: 10px #000;
+display: inline-block;
+}
+
+.designDiv p {
+    margin: 10px;
+    color: #000;
 }
 
 .devDiv {
-    grid-row: 4;
+    display: inline-block
     margin: 0 auto;
     border-bottom: 10px #000;
 }
@@ -164,11 +168,6 @@ a {
 /* +++ End Team +++ */
 
 /* +++ Start Image Hover Effect +++*/
-/*.effectCon {
-	position:relative;
-    width:1200px;
-    margin: 0 auto;
-}*/
 
 .effect {
     width: 250px;
@@ -221,10 +220,11 @@ a {
     background: #000;
     color: #fff;
     box-shadow: 0 0 1px #000;
- }
- .effect a.button: hover {
+}
+
+.effect a.button: hover {
     box-shadow: 5px 5px 5px #000;
- }
+}
 
  .effect-view img {
     -webkit-transition: all 0.4s linear;
@@ -235,6 +235,7 @@ a {
  }
  .effect-view .frost {
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
     opacity: 0;
     background-color: rgba(218,41,28, 0.7);
     -webkit-transition: all 0.3s ease-in-out;
@@ -250,6 +251,7 @@ a {
     -ms-transform: translateY(-100px);
     transform: translateY(-100px);
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
     opacity: 0;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -281,6 +283,7 @@ a {
  }
  .effect-view a.button {
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
     opacity: 0;
     -webkit-transition: all 0.8s ease-in-out;
     -moz-transition: all 0.8s ease-in-out;
@@ -290,6 +293,7 @@ a {
  }
  .effect-view:hover .frost {
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
     opacity: 1;
  }
  .effect-view:hover h2,
@@ -297,6 +301,7 @@ a {
  .effect-view:hover a.button {
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
     opacity: 1;
+    filter: alpha(opacity=100);
     -webkit-transform: translateY(0px);
     -moz-transform: translateY(0px);
     -o-transform: translateY(0px);
