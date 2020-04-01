@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+html {
+    background: url(../images/Team_heroBG.jpg) no-repeat left fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+p {
+    color: #fff;
+}
+
+a {
+    color: #fff;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(250px, auto);
+}
+
+/* +++ Start Logo +++ */
+.logoCon {
+    grid-column: 1 / 2;
+    grid-row: 2;
+}
+
+.logo {
+    height: 22vh;
+    margin-left: 2vw;
+    position: fixed;
+}
+
+/* +++ End Logo +++ */
+
+/* +++ Start Sidebar - Team +++ */
+
+.sidebar {
+    grid-column: 1;
+    grid-row: 3 / 8;
+    position: fixed;
+    padding-top: 20px;
+}
+
+.dept {
+    position: fixed;
+    bottom: 1vh;
+    left: 3vw;
+    height: 80vh;
+}
+
+/* +++ End Sidebar - Team +++ */
+
+/* +++ Start Main Nav +++ */
+.mainNavCon {
+    grid-column: 2;
+    grid-row: 4/8;
+}
+
+.mainNav {
+    position: absolute;
+    top: 9vh;
+    left: 18vw;
+}
+
+.mainNav ul li {
+    display: inline-block;
+    padding: 20px;
+    font-size: 36px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.mainNav ul li:hover {
+    transform: scale(1.05);
+}
+
+.active {
+    background: url(../images/stroke.svg) no-repeat center;
+    background-size: 120px;
+}
+
+/* +++ End Main Nav +++ */
+
+/* +++ Start Slogan +++ */
+.homeHeroContent {
+    text-align: left;
+    position: absolute;
+    top: 40vh;
+    left: 18vw;
+}
+
+.sloganCon {
+    grid-column: 2 / 5;
+    grid-row: 2;
+}
+
+.slogan {
+    width: 60vw;
+    font-size: 72px;
+    padding: 0 auto;
+    margin: 10px 0;
+    text-align: left;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.sloganCon h3 {
+    font-size: 64px;
+    color: #fff;
+    margin: 10px 0;
+    text-align: left;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+/* +++ End Slogan +++ */
+
+/* +++ Start Team +++ */
+.teamCon {
+    grid-column: 3 /10;
+    grid-row: 3;
+    margin: 80px 0 10px 0; 
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.teamCon p {
+    color: #222;
+}
+
+.teamTitles {
+    font-size: 48px;
+    margin: 0 auto;
+    color: #da291c;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.gavin {
+    display: contents
+    margin-right: 20px;
+    margin-top: 20px;
+    padding-left: 10px;
+    max-width: 250px;
+    float: right;
+}
+
+.katie {
+    display: contents
+    margin-right: 20px;
+    margin-top: 20px;
+    padding-right: 10px;
+    max-width: 250px;
+    float: left;
+}
+/* +++ End Team +++ */
