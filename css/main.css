@@ -179,23 +179,32 @@ a {
 }
 
 .extension {
-    grid-row: 3/4;
+    display: flex;
+    grid-row: 3;
+    grid-column: 1/-1;
 }
 
 .currentMember {
     width: 100%;
+    max-width: 400px;
+    box-shadow: 1px 2px 2px #e6e6e6;
+    border: 5px solid whitesmoke;
+    border-left: 0;
     grid-column: 1;
     margin: 0;
 }
+.currentMember img {
+    width: 100%;
+}
 
 .currentInfo {
+    width: 100%;
     background-color: rgba(218, 41, 28, 0.7);
     border: 5px solid whitesmoke;
     box-shadow: 1px 2px 2px #e6e6e6;
     grid-row: 3;
     display: flex;
     flex-direction: column;
-    justify-self: center;
 }
 
 .currentInfo .button {
@@ -215,7 +224,7 @@ a {
 }
 .currentInfo p {
     color: whitesmoke;
-    font-size: 30px;
+    font-size: 26px;
     margin: 0px 20px;
 }
 
@@ -296,6 +305,7 @@ a {
     transition: all 0.3s ease-in-out;
 }
 .effect-view h2 {
+    margin-top: 25%; /* here to center the header a bit if we take out the paragraph*/
     -webkit-transform: translateY(-100px);
     -moz-transform: translateY(-100px);
     -o-transform: translateY(-100px);
@@ -374,7 +384,3 @@ a {
     transition-delay: 0.2s;
 }
 /* +++ Start Image Hover Effect +++*/
-
-.hidden {
-    display: none;
-}
