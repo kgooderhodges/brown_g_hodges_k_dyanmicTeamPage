@@ -11,7 +11,7 @@ html {
 a:link,
 a:visited,
 a:active {
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 body {
@@ -99,16 +99,15 @@ a {
 
 /* +++ Start Slogan +++ */
 .homeHeroContent {
-    text-align: left;
-    position: absolute;
-    top: 40vh;
-    left: 18vw;
+    grid-area: 1/3/2/8;
+    display: flex;
+    align-self: center;
 }
 
-.sloganCon {
+/*.sloganCon {
     grid-column: 2 / 5;
     grid-row: 2;
-}
+}*/
 
 .slogan {
     width: 60vw;
@@ -131,15 +130,22 @@ a {
 /* +++ Start Team +++ */
 .teamCon {
     grid-column: 3 /10;
-    grid-row: 3;
-    margin: 80px 0 10px 0; 
     padding: 15px;
     background: rgba(255, 255, 255, 0.7);
 
+    grid-auto-rows: auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
 }
 
 .teamCon p {
     color: #222;
+}
+
+.ourTeam {
+    text-align: center;
+    grid-area: 1/1/2/-1;
 }
 
 .teamTitles {
@@ -151,18 +157,66 @@ a {
 }
 
 .designDiv {
-display: inline-block;
+    display: flex;
+    justify-content: space-evenly;
+    grid-area: 2/1/3/-1;
+}
+.designDiv .effect {
+    width: 250px;
 }
 
-.designDiv p {
-    margin: 10px;
-    color: #000;
+#katie {
+    order: 1;
+}
+#starbuck {
+    order: 2;
+}
+#gavin {
+    order: 3;
+}
+#caya {
+    order: 4;
 }
 
-.devDiv {
-    display: inline-block
-    margin: 0 auto;
-    border-bottom: 10px #000;
+.extension {
+    grid-row: 3/4;
+}
+
+.currentMember {
+    width: 100%;
+    grid-column: 1;
+    margin: 0;
+}
+
+.currentInfo {
+    background-color: rgba(218, 41, 28, 0.7);
+    border: 5px solid whitesmoke;
+    box-shadow: 1px 2px 2px #e6e6e6;
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.currentInfo .button {
+    font-size: 48px;
+    text-align: center;
+    order: -1;
+    text-transform: uppercase;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    box-shadow: 0 0 1px #000;
+}
+
+.currentInfo h2 {
+    font-size: 36px;
+    margin: 20px;
+}
+.currentInfo p {
+    color: whitesmoke;
+    font-size: 30px;
+    margin: 0px 20px;
 }
 
 /* +++ End Team +++ */
@@ -170,30 +224,27 @@ display: inline-block;
 /* +++ Start Image Hover Effect +++*/
 
 .effect {
-    width: 250px;
-    height: 250px;
+    display: inline-block;
     margin: 10px 10px 20px 0;
-    float: left;
     border: 5px solid whitesmoke;
     overflow: hidden;
     position: relative;
     text-align: center;
-    box-shadow: 1px 2px 2px #e6e6e6;;
+    box-shadow: 1px 2px 2px #e6e6e6;
     cursor: default;
 }
- .effect .frost,.effect .content {
-    width: 250px;
-    height: 250px;
+.effect .frost {
+    width: 100%;
+    height: 100%;
     position: absolute;
     overflow: hidden;
     top: 0;
-    left: 0;
- }
- .effect img {
+}
+.effect img {
     display: block;
-    position: relative;
- }
- .effect h2 {
+    width: 100%;
+}
+.effect h2 {
     text-transform: uppercase;
     color: #fff;
     text-align: center;
@@ -201,17 +252,17 @@ display: inline-block;
     font-size: 24px;
     padding: 10px;
     margin: 10px 0 0 0;
- }
- 
- .effect p {
+}
+
+.effect p {
     font-family: "Franklin Gothic Medium", "Arial Narrow", sans-serif;
     font-size: 12px;
     position: relative;
     color: #fff;
     padding: 20px 20px 25px;
     text-align: center;
- }
- .effect a.button {
+}
+.effect .button {
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
@@ -222,29 +273,29 @@ display: inline-block;
     box-shadow: 0 0 1px #000;
 }
 
-.effect a.button: hover {
+.effect a.button:hover {
     box-shadow: 5px 5px 5px #000;
 }
 
- .effect-view img {
+.effect-view img {
     -webkit-transition: all 0.4s linear;
     -moz-transition: all 0.4s linear;
     -o-transition: all 0.4s linear;
     -ms-transition: all 0.4s linear;
     transition: all 0.4s linear;
- }
- .effect-view .frost {
+}
+.effect-view .frost {
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
     opacity: 0;
-    background-color: rgba(218,41,28, 0.7);
+    background-color: rgba(218, 41, 28, 0.7);
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
- }
- .effect-view h2 {
+}
+.effect-view h2 {
     -webkit-transform: translateY(-100px);
     -moz-transform: translateY(-100px);
     -o-transform: translateY(-100px);
@@ -258,8 +309,8 @@ display: inline-block;
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
- }
- .effect-view p {
+}
+.effect-view p {
     -webkit-transform: translateY(100px);
     -moz-transform: translateY(100px);
     -o-transform: translateY(100px);
@@ -273,15 +324,15 @@ display: inline-block;
     -o-transition: all 0.4s linear;
     -ms-transition: all 0.4s linear;
     transition: all 0.4s linear;
- }
- .effect-view:hover img {
-    -webkit-transform: scale(1.2,1.2);
-    -moz-transform: scale(1.2,1.2);
-    -o-transform: scale(1.2,1.2);
-    -ms-transform: scale(1.2,1.2);
-    transform: scale(1.2,1.2);
- }
- .effect-view a.button {
+}
+.effect-view:hover img {
+    -webkit-transform: scale(1.2, 1.2);
+    -moz-transform: scale(1.2, 1.2);
+    -o-transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+}
+.effect-view a.button {
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
     opacity: 0;
@@ -290,15 +341,15 @@ display: inline-block;
     -o-transition: all 0.8s ease-in-out;
     -ms-transition: all 0.8s ease-in-out;
     transition: all 0.8s ease-in-out;
- }
- .effect-view:hover .frost {
+}
+.effect-view:hover .frost {
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100);
     opacity: 1;
- }
- .effect-view:hover h2,
- .effect-view:hover p,
- .effect-view:hover a.button {
+}
+.effect-view:hover h2,
+.effect-view:hover p,
+.effect-view:hover a.button {
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
     opacity: 1;
     filter: alpha(opacity=100);
@@ -307,19 +358,23 @@ display: inline-block;
     -o-transform: translateY(0px);
     -ms-transform: translateY(0px);
     transform: translateY(0px);
- }
- .effect-view:hover p {
+}
+.effect-view:hover p {
     -webkit-transition-delay: 0.1s;
     -moz-transition-delay: 0.1s;
     -o-transition-delay: 0.1s;
     -ms-transition-delay: 0.1s;
     transition-delay: 0.1s;
- }
- .effect-view:hover a.button {
+}
+.effect-view:hover a.button {
     -webkit-transition-delay: 0.2s;
     -moz-transition-delay: 0.2s;
     -o-transition-delay: 0.2s;
     -ms-transition-delay: 0.2s;
     transition-delay: 0.2s;
- }
- /* +++ Start Image Hover Effect +++*/
+}
+/* +++ Start Image Hover Effect +++*/
+
+.hidden {
+    display: none;
+}
