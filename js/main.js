@@ -1,52 +1,47 @@
 (() => {
     let members = document.querySelectorAll(".designDiv .effect"),
-        extension = document.querySelector(".extension"),
-        grid = document.querySelector(".teamCon");
+        extension = document.querySelector(".extension");
 
-    //console.log(members);
+    //array for members description
+    const memberDesc = [
+        "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.",
+        "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.",
+        "As the main workhorse of the Dev Team, Gavin tackles all those pesky 'parameter 1 is undefined' errors. When click and things do stuff, thats his handywork. Remember to hug you Dev friends when you get the chance because they are probably very frustrated at any given time",
+        "The Development Supervisor keeps a very watchful eye on the workers. Caya makes sure they pay attention to their work, or her; whichever the situation calls for. She doesnt hestitate to take over at the keyboard and type her own version of code. "
+    ];
 
     function highlightMember() {
         if (extension.children.length > 0) {
-            toggleHighlight();
+            extension.innerHTML = "";
         }
+        //get elements for altering
+        let memberPick = this.cloneNode(true);
+        let memberInfo = memberPick.querySelector(".frost");
+        let memberText = memberInfo.querySelector("p");
 
-        this.classList.remove("effect-view");
-        this.classList.add("currentMember");
+        console.log(memberPick.id);
 
-        extension.appendChild(this);
-
-        let memberInfo = this.querySelector(".frost");
+        //change the css styling on them
+        memberPick.classList.remove("effect-view", "effect");
+        memberPick.classList.add("currentMember");
         memberInfo.classList.add("currentInfo");
 
-        grid.appendChild(memberInfo);
+        // Image Change to color
+        let newImage = memberPick.querySelector("img");
+        let imageSource = `images/${this.id}Color.jpg`;
+        newImage.src = imageSource;
+
+        console.log(newImage);
+
+        //move cloned nodes into place
+        extension.appendChild(memberPick);
+        extension.appendChild(memberInfo);
+
+        console.log(memberText);
+
+        memberText.textContent = `${memberDesc[this.dataset.index]}`;
     }
 
-    function toggleHighlight() {
-        let currentMember = document.querySelector(".currentMember");
-        let designDiv = document.querySelector(".designDiv");
-        let currentInfo = document.querySelector(".currentInfo");
-
-        currentMember.classList.add("effect-view");
-        currentMember.appendChild(currentInfo);
-
-        console.log(currentMember);
-        console.log(currentInfo);
-
-        designDiv.appendChild(currentMember);
-
-        currentMember.classList.remove("currentMember");
-        currentInfo.classList.remove("currentInfo");
-    }
-
+    // listen for clicks on each member picture
     members.forEach(member => member.addEventListener("click", highlightMember));
 })();
-/*     const memberInfo = [
-    [
-      "Gavin",
-      `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure debitis repellat, aperiam saepe dicta quidem accusamus. Commodi pariatur recusandae cupiditate. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure debitis repellat, aperiam saepe dicta quidem accusamus. Commodi pariatur recusandae cupiditate.`
-    ],
-    [
-      "Katie",
-      `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure debitis repellat, aperiam saepe dicta quidem accusamus. Commodi pariatur recusandae cupiditate.`
-    ]
-  ]; */
