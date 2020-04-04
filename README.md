@@ -1,3 +1,5 @@
+<img src="images/logoDraw.gif" width="200px">
+
 # Meet The Team At Tucks!
 
 ## Masterminds behind the Medicated Cooling Beer
