@@ -13,3 +13,5 @@ Gavin Brown, Katie Hodges
 
 ## License
 Tucks Brewery 2020
+
+https://docs.google.com/document/d/1VJhI_1bkH6lkSKGu0wIPPzvwrDPt8b0QKaa9ImUULOQ/edit?usp=sharing
